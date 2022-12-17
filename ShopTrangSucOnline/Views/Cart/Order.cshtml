@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "Order";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    List<CartItem> carts = Context.Session.Get<List<CartItem>>("Cart");
+}
+
+<section id="cart_items">
+    <div class="container">
+        <div class="breadcrumbs">
+            <ol class="breadcrumb">
+                <li><a href="/Home/Index">Trang chủ</a></li>
+                <li class="active">Giỏ hàng</li>
+            </ol>
+        </div>
+        <div class="table-responsive cart_info">
+            <table class="table table-condensed">
+                <thead>
+                    <tr class="cart_menu">
+                        <td class="image">Sản phẩm</td>
+                        <td class="price">Giá</td>
+                        <td class="quantity">Số lượng</td>
+                        <td class="total">Thành tiền</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                @{
+                    double tongTien = 0;
+                }
+                <tbody>
+                    @if (carts != null)
+                    {
+                        @foreach (var item in carts)
+                        {
+                            <tr>
+                                <td class="cart_product">
+                                    <a href=""><img src="~/assets/images/product/@item.ProductOrder.Image" alt=""></a>
+                                </td>
+                                <td class="cart_description">
+                                    <h4>@item.ProductOrder.Name</h4>
+                                    <p>ID: @item.ProductOrder.Id</p>
+                                </td>
+                                <td class="cart_price">
+                                    <p>@item.ProductOrder.Promotion Đ</p>
+                                </td>
+                                <td class="cart_quantity">
+                                    <div class="cart_quantity_button">
+                                        <a class="cart_quantity_up" href=""> + </a>
+                                        <input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
+                                        <a class="cart_quantity_down" href=""> - </a>
+                                    </div>
+                                </td>
+                                <td class="cart_total">
+                                    <p class="cart_total_price">
+                                        @{
+                                            double tong = item.Quantity * (double)item.ProductOrder.Promotion;
+                                            tongTien += tong;
+                                        }
+                                        @tong
+                                    </p>
+                                </td>
+                                <td class="cart_delete">
+                                    <a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Tổng tiền thanh toán</td>
+                        <td>@tongTien Đ</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Thông tin khách hàng</h1>
+        <form asp-controller="Cart" asp-action="Order" method="post" class="mx-2">
+            <div class="form-group">
+                <input class="form-control" name="hoten" placeholder="Họ tên" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="email" placeholder="Email" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="dienthoai" placeholder="Điện thoại" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="diachi" placeholder="Địa chỉ" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="ghichu" placeholder="Ghi chú" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Đồng ý đặt hàng</button>
+            </div>
+        </form>
+    </div>
+</section> <!--/#cart_items-->

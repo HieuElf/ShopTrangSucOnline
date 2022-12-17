@@ -1,0 +1,82 @@
+﻿@model ShopTrangSucOnline.Model.Entities.Order
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-title">Thêm mới</h6>
+        <form class="forms-sample" action="/Admin/Order/Create" method="post">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Id"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Id">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerName"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerAddress"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerAddress">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerEmail"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerEmail">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerMobile"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerMobile">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerMessage"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerMessage">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CreatedDate"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CreatedDate">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CreatedBy"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CreatedBy">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="PaymentMethod"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="PaymentMethod">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="PaymentStatus"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="PaymentStatus">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Status"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Status">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

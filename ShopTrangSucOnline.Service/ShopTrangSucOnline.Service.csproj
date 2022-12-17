@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopTrangSucOnline.Model\ShopTrangSucOnline.Model.csproj" />
+    <ProjectReference Include="..\ShopTrangSucOnline.Repository\ShopTrangSucOnline.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

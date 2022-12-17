@@ -1,0 +1,63 @@
+﻿@model List<ShopTrangSucOnline.Model.Entities.Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1>Quản lý Sản phẩm</h1>
+<a href="/Admin/Product/Create" class="btn btn-primary mb-3">Thêm mới</a>
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-title">Danh sách sản phẩm</h6>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Mã danh mục sản phẩm</th>
+                        <th>Ảnh</th>
+                        <th>Ảnh...</th>
+                        <th>Giá</th>
+                        <th>Giá gốc</th>
+                        <th>Bảo hành</th>
+                        <th>Mô tả</th>
+                        <th>Từ khoá</th>
+                        <th>Ngày tạo</th>
+                        <th>Tạo bởi</th>
+                        <th>Ngày cập nhật</th>
+                        <th>Cập nhật bởi</th>
+                        <th>Trạng thái</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.CategoryId</td>
+                            <td>@item.Image</td>
+                            <td>@item.MoreImage</td>
+                            <td>@item.Price</td>
+                            <td>@item.Promotion</td>
+                            <td>@item.Warranty</td>
+                            <td>@item.Description</td>
+                            <td>@item.KeyWord</td>
+                            <td>@item.CreatedDate</td>
+                            <td>@item.CreatedBy</td>
+                            <td>@item.UpdatedDate</td>
+                            <td>@item.UpdatedBy</td>
+                            <td>@item.Status</td>
+                            <td>
+                                <a class="btn btn-primary" href="/Admin/ProductCategory/Edit/@item.Id">Sửa</a>
+                                <a class="btn btn-danger" href="/Admin/ProductCategory/Delete/@item.Id">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

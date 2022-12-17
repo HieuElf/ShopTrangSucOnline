@@ -1,0 +1,15 @@
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\bin\Debug\net6.0\ShopTrangSucOnline.Repository.deps.json
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\bin\Debug\net6.0\ShopTrangSucOnline.Repository.dll
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\bin\Debug\net6.0\ShopTrangSucOnline.Repository.pdb
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.csproj.AssemblyReference.cache
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.GeneratedMSBuildEditorConfig.editorconfig
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.AssemblyInfoInputs.cache
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.AssemblyInfo.cs
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.csproj.CoreCompileInputs.cache
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.dll
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\refint\ShopTrangSucOnline.Repository.dll
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.pdb
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ref\ShopTrangSucOnline.Repository.dll
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\bin\Debug\net6.0\ShopTrangSucOnline.Model.dll
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\bin\Debug\net6.0\ShopTrangSucOnline.Model.pdb
+E:\HocTap\.Net\advanced\end\ShopTrangSucOnline\ShopTrangSucOnline.Repository\obj\Debug\net6.0\ShopTrangSucOnline.Repository.csproj.CopyComplete

@@ -1,0 +1,56 @@
+﻿@model List<ShopTrangSucOnline.Model.Entities.Order>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h1>Quản lý Order</h1>
+<a href="/Admin/Order/Create" class="btn btn-primary mb-3">Thêm mới</a>
+<a href="/Admin/OrderDetail/Index" class="btn btn-primary mb-3">Xem chi tiết đơn hàng</a>
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-title">Danh sách Order</h6>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên khách hàng</th>
+                        <th>Địa chỉ</th>
+                        <th>Email</th>
+                        <th>Số điện thoại</th>
+                        <th>Lời nhắn</th>
+                        <th>Ngày tạo</th>
+                        <th>Tạo bởi</th>
+                        <th>Phương thức thanh toán</th>
+                        <th>Trạng thái thanh toán</th>
+                        <th>Trạng thái đơn hàng</th>
+                        <th>Chức năng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td>@item.CustomerName</td>
+                            <td>@item.CustomerAddress</td>
+                            <td>@item.CustomerEmail</td>
+                            <td>@item.CustomerMobile</td>
+                            <td>@item.CustomerMessage</td>
+                            <td>@item.CreatedDate</td>
+                            <td>@item.CreatedBy</td>
+                            <td>@item.PaymentMethod</td>
+                            <td>@item.PaymentStatus</td>
+                            <td>@item.Status</td>
+                            <td>
+                                <a class="btn btn-primary" href="/Admin/Order/Edit/@item.Id">Sửa</a>
+                                <a class="btn btn-danger" href="/Admin/Order/Delete/@item.Id">Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

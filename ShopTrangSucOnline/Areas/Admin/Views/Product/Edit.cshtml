@@ -1,0 +1,106 @@
+﻿@model ShopTrangSucOnline.Model.Entities.Product
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-title">Chỉnh sửa</h6>
+        <form class="forms-sample" action="/Admin/Product/Edit" method="post">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Id"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Id" value="@Model.Id">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Name"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Name" value="@Model.Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CategoryId"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CategoryId" value="@Model.CategoryId">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Image"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Image" value="@Model.Image">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="MoreImage"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="MoreImage" value="@Model.MoreImage">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Price"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Price" value="@Model.Price">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Promotion"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Promotion" value="@Model.Promotion">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Warranty"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Warranty" value="@Model.Warranty">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Description"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Description" value="@Model.Description">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="KeyWord"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="KeyWord" value="@Model.KeyWord">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CreatedDate"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CreatedDate" value="@Model.CreatedDate">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CreatedBy"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CreatedBy" value="@Model.CreatedBy">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="UpdatedDate"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="UpdatedDate" value="@Model.UpdatedDate">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="UpdatedBy"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="UpdatedBy" value="@Model.UpdatedBy">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Status"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Status" value="@Model.Status">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Update</button>
+            <a class="btn btn-light" href="/Admin/Product/Index">Huỷ</a>
+        </form>
+    </div>
+</div>
+

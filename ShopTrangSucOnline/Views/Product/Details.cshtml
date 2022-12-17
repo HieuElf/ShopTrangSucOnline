@@ -1,0 +1,62 @@
+﻿@model ShopTrangSucOnline.Model.Entities.Product
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="product-details">
+    <!--product-details-->
+    <div class="col-sm-7">
+        <div class="view-product">
+            <img src="~/assets/images/product/@Model.Image" class="newarrival" alt="" />
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="product-information">
+            <!--/product-information-->          
+            <h2>@Model.Name</h2>
+            <p>ID: @Model.Id</p>
+            <div><img src="~/assets/images/product-details/rating.png" alt="" /></div>
+            <span>
+                <div>
+                    <span style="color: #ff003c; text-decoration: line-through;">@Model.Price Đ</span>
+                </div>
+                <div>
+                    <span>@Model.Promotion Đ</span>
+                </div>            
+                <div>
+                    <label>Số lượng:</label>
+                    <input type="text" value="1" />
+                </div>
+                <div>
+                    <button onclick="AddToCart('@Model.Id')" type="button" class="btn btn-fefault cart">
+                        <i class="fa fa-shopping-cart"></i>
+                        Thêm vào giỏ hàng
+                    </button>
+                </div>
+            </span>
+            <p><b>Từ khoá: @Model.KeyWord</b></p>
+            <p><b>Tình trạng kho hàng:</b>Có sẵn @Model.Status | Số lượng: @Model.Warranty</p>
+            <p><b>Tình trạng:</b> Mới</p>
+            <p><b>Nhãn hiệu:</b> ShopTrangSucOnline</p>
+            <a href=""><img src="/assets/images/product-details/share.png" class="share img-responsive" alt="" /></a>
+        </div><!--/product-information-->
+    </div>
+</div><!--/product-details-->
+
+<div class="category-tab shop-details-tab">
+    <!--category-tab-->
+    <div class="col-sm-12">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#details" data-toggle="tab">Mô tả</a></li>
+            <li><a href="#tag" data-toggle="tab">Tag</a></li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane fade" id="details">
+            <p>@Model.Description</p>
+        </div>
+        <div class="tab-pane fade" id="tag">
+            <p>@Model.KeyWord</p>       
+        </div>
+    </div>
+</div><!--/category-tab-->

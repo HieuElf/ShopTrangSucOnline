@@ -1,0 +1,82 @@
+﻿@model Tuple<List<ShopTrangSucOnline.Model.Entities.Product>,List<ShopTrangSucOnline.Model.Entities.Product>>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section id="slider">
+    <!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <h1><span>Shop</span>Trang Sức</h1>                              
+                                <a class="btn btn-default get" href="/ProductCategory/Index">Vào shop</a>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/assets/images/product/nhan-cuoi-kim-cuong-pnj-vang-14k-1.png" class="img-responsive" alt="" />
+                            </div>
+                        </div>
+                        @foreach (var item in Model.Item2)
+                        {
+                            <div class="item">
+                                <div class="col-sm-6">
+                                    <h1><span>@item.Name</span></h1>
+                                    <h2>@item.Promotion Đ</h2>
+                                    <a href="/ProductCategory/Index" class="btn btn-default get">Vào shop</a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img src="~/assets/images/product/@item.Image" class="img-responsive" alt="" />
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->
+<div class="container">
+    <div class="features_items col-sm-12">
+        <!--features_items-->
+        <h2 class="title text-center">Sản phẩm mới</h2>
+        @foreach (var item in Model.Item1)
+        {
+            <div class="col-sm-4">
+                <div class="product-image-wrapper">
+                    <div class="single-products">
+                        <div class="productinfo text-center">
+                            <img src="~/assets/images/product/@item.Image" class="col-sm-2" alt="" />
+                            <h2>@item.Promotion Đ</h2>
+                            <div>
+                                <a href="/Product/Details/@item.Id">@item.Name</a>
+                            </div>
+                            <button onclick="AddToCart('@item.Id')" type="button" class="btn btn-fefault cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                Thêm vào giỏ hàng
+                            </button>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div><!--features_items-->
+
+</div>

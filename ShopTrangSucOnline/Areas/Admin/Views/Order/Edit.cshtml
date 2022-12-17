@@ -1,0 +1,82 @@
+﻿@model ShopTrangSucOnline.Model.Entities.Order
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-title">Chỉnh sửa</h6>
+        <form class="forms-sample" action="/Admin/Order/Edit" method="post">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Id"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Id" value="@Model.Id">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerName"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerName" value="@Model.CustomerName">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerAddress"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerAddress" value="@Model.CustomerAddress">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerEmail"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerEmail" value="@Model.CustomerEmail">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerMobile"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerMobile" value="@Model.CustomerMobile">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CustomerMessage"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CustomerMessage" value="@Model.CustomerMessage">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CreatedDate"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CreatedDate" value="@Model.CreatedDate">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="CreatedBy"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="CreatedBy" value="@Model.CreatedBy">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="PaymentMethod"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="PaymentMethod" value="@Model.PaymentMethod">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="PaymentStatus"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="PaymentStatus" value="@Model.PaymentStatus">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Status"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Status" value="@Model.Status">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Update</button>
+            <a class="btn btn-light" href="/Admin/Order/Index">Huỷ</a>
+        </form>
+    </div>
+</div>
+

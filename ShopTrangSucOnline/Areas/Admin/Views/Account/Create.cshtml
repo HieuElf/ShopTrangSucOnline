@@ -1,0 +1,40 @@
+﻿@model ShopTrangSucOnline.Model.Entities.Account
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h6 class="card-title">Thêm mới</h6>
+        <form class="forms-sample" action="/Admin/Account/Create" method="post">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Id"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Id">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Username"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Username">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Password"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label" asp-for="Permission"></label>
+                <div class="col-sm-9">
+                    <input class="form-control" asp-for="Permission">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
